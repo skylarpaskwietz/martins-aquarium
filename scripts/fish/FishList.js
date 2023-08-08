@@ -24,29 +24,26 @@ export const FishList = () => {
 export const mostHolyFish = () => {
     // 3, 6, 9, 12, etc... fish
     const holyFish = []
-    const holyHolyFish = getFish()
-    for (const theHoliness of holyHolyFish) {
-        if (theHoliness.size % 3 === 0 )
-        holyFish.push(theHoliness)
+    for (const fish of fishes) {
+        if (fish.size % 3 === 0 )
+        holyFish.push(fish)
     }   return holyFish
 }
 
 export const soldierFish = () => {
     //5, 10, 15, 20, etc... fish
     const soldiers = []
-    const battleFish = getFish()
-    for (const souljaFish of battleFish) {
-        if (souljaFish.size % 5 === 0)
-        soldiers.push(souljaFish)
+    for (const fish of fishes) {
+        if (fish.size % 5 === 0)
+        soldiers.push(fish)
     }   return soldiers
 }
 
 export const nonHolyFish = () => {
     // Any fish nnot multiple of 3 0r 5
     const regularFish = []
-    const regularRegularFish = getFish()
-    for (const regular of regularRegularFish){
-        if (regular.size % 3 !== 0 && regular.size % 5 !== 0)
-        regularFish.push(regular)
+    for (const fish of fishes){
+        if (fish.size % 3 !== 0 && fish.size % 5 !== 0)
+        regularFish.push(fish)
     }   return regularFish
 }

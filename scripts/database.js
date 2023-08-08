@@ -49,45 +49,65 @@ const database = {
   qoutes: [
     {
         id: 1,
-        saying: ""
+        saying: "Bacon ipsum dolor amet picanha tenderloin tail chuck, spare ribs sausage salami brisket andouille jerky rump meatloaf t-bone drumstick. Brisket sausage chislic pig rump beef swine cow picanha flank venison capicola."
     },
     {
         id: 2,
-        saying: ""
+        saying: "Pork pork chop leberkas beef ribs. Hamburger salami drumstick, chuck venison tri-tip picanha kevin t-bone sirloin buffalo frankfurter. Boudin ball tip ribeye pork turkey bresaola."
     },
     {
         id: 3,
-        saying: ""
+        saying: "T-bone chuck hamburger pork belly, beef ribs ball tip swine tail pastrami meatloaf salami flank."
     },
    ],
-//    locations: [
-//     {
-//         id: 1,
-//         place: ""
-//     },
-//     {
-//         id: 2,
-//         place: ""
-//     },
-//     {
-//         id: 3,
-//         place: ""
-//     },
-//     {
-//         id: 4,
-//         place: ""
-//     },
-//     {
-//         id: 5,
-//         place: ""
-//     },
-//     {
-//         id: 6,
-//         place: ""
-//     },
-//    ]
+   fishTankCleaningTips: [
+    {
+         id: 1,  
+        tip: "Perform regular water changes to maintain water quality."
+    },
+    {
+         id: 2,
+        tip: "Use a gravel vacuum to remove debris and waste from the substrate."
+   },
+   {    
+        id: 3,
+        tip: "Clean the filter media according to the manufacturer's recommendations."
+   },  
+    {    id: 4,  
+        tip: "Avoid overfeeding your fish to prevent excess waste buildup."
+    },
+    {
+        id: 5,
+        tip: "Monitor water parameters using test kits and adjust as needed."
+    },
+  ],
+  locationList: [
+    {
+      id: 1,
+      image: "https://www.sdentertainer.com/wp-content/uploads/sebastian-pena-lambarri-1218070-unsplash.jpg",
+      locationName: "San Diego"
+    },
+    {
+      id: 2,
+      image: "https://www.balifundiving.com/wp-content/uploads/2020/09/start-scuba-diving.jpg",
+      locationName: "Bali"
+    },
+    {
+    id: 3,
+    image: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/81/da/af.jpg",
+    locationName: "Maui"
+    }
+  ]
 }
 
 export const getFish = () => {
     return database.fish.map(fish => ({...fish}))
+}
+
+export const getTips = () => {
+  return database.fishTankCleaningTips.map(fishTankCleaningTips => ({...fishTankCleaningTips}))
+}
+
+export const getLocations = () => {
+  return database.locationList.map(locationList => ({...locationList}))
 }
